@@ -109,8 +109,8 @@ export const VercelDeployGuideModal: React.FC<VercelDeployGuideModalProps> = ({ 
                   <span><strong>Tarifs officiels par nuitée</strong> : grille tarifaire des différentes chambres selon saisonnalité.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="w-3.5 h-3.5 text-[#B55F38] shrink-0 mt-0.5" />
-                  <span><strong>Adresse postale et quartier précis</strong> : pour ajouter l'épingle exacte sur Google Maps / OpenStreetMap.</span>
+                  <CheckCircle className="w-3.5 h-3.5 text-green-600 shrink-0 mt-0.5" />
+                  <span><strong>Adresse postale confirmée</strong> : Lot 1118 E 325 Mahazoarivo Nord (coordonnées GPS -19.8820, 47.0410 désormais intégrées sur la carte OpenStreetMap).</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-3.5 h-3.5 text-[#B55F38] shrink-0 mt-0.5" />

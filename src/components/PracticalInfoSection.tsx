@@ -12,9 +12,9 @@ export const PracticalInfoSection: React.FC = () => {
       status: "Confirmé (Source officielle)"
     },
     {
-      label: "Localisation",
-      value: "Antsirabe, Madagascar (Hauts-Plateaux)",
-      status: "Confirmé (Adresse précise sur WhatsApp)"
+      label: "Adresse & Localisation",
+      value: "Lot 1118 E 325 Mahazoarivo Nord, Antsirabe",
+      status: "Confirmé (GPS : -19.8820, 47.0410)"
     },
     {
       label: "Contact WhatsApp",
@@ -58,8 +58,8 @@ export const PracticalInfoSection: React.FC = () => {
       a: "Les tarifs ne sont pas fixés sur cette maquette car ils dépendent de la saisonnalité, de la durée du séjour et du type de chambre sélectionné. Ils vous seront communiqués instantanément par WhatsApp par l'hôte."
     },
     {
-      q: "Comment obtenir l'adresse exacte et l'itinéraire d'accès ?",
-      a: "Pour garantir une arrivée sereine à Antsirabe (en provenance de la capitale ou du Sud), l'hôte vous transmet les coordonnées et les repères routiers les plus simples dès votre prise de contact."
+      q: "Comment rejoindre l'hôtel à Mahazoarivo Nord ?",
+      a: "L'établissement est situé au Lot 1118 E 325 Mahazoarivo Nord à Antsirabe (coordonnées GPS : -19.8820, 47.0410). Vous pouvez ouvrir l'itinéraire direct vers l'hôtel via le bouton Google Maps présent sur la carte de cette page, ou demander les repères à l'hôte sur WhatsApp."
     },
     {
       q: "Y a-t-il un paiement sécurisé ou des arrhes à verser en ligne ?",

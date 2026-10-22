@@ -35,7 +35,7 @@ export const Header: React.FC = () => {
               <span>Chez DEO</span>
               <span className="w-1 h-1 rounded-full bg-[#B55F38]"></span>
               <span className="flex items-center text-[#5A6B5C]">
-                <MapPin className="w-2.5 h-2.5 inline mr-0.5" /> Antsirabe, Madagascar
+                <MapPin className="w-2.5 h-2.5 inline mr-0.5" /> Mahazoarivo Nord, Antsirabe
               </span>
             </span>
           </a>

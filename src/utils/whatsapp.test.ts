@@ -40,5 +40,5 @@ test('buildWhatsAppMessage incorporates room name, dates and guests', () => {
 test('createLocationInquiryUrl generates itinerary question for Antsirabe', () => {
   const url = createLocationInquiryUrl();
   assert.ok(url.startsWith(`https://wa.me/${OFFICIAL_PHONE_NUMBER}?text=`));
-  assert.ok(decodeURIComponent(url).includes("adresse exacte et les repères d’accès"));
+  assert.ok(decodeURIComponent(url).includes("Lot 1118 E 325 Mahazoarivo Nord"));
 });

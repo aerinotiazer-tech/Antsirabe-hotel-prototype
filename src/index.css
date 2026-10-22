@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
 
 @layer base {
   body {
@@ -9,6 +10,29 @@
     font-family: 'Cinzel', Georgia, serif;
     letter-spacing: -0.01em;
   }
+}
+
+/* Custom Leaflet popup branding */
+.leaflet-popup-content-wrapper {
+  background: #FAF7F2 !important;
+  color: #2B1E16 !important;
+  border-radius: 12px !important;
+  border: 1px solid #D9CFC4 !important;
+  box-shadow: 0 10px 25px -5px rgba(43, 30, 22, 0.25) !important;
+  padding: 4px 6px !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.leaflet-popup-tip {
+  background: #FAF7F2 !important;
+}
+
+.leaflet-popup-content b {
+  font-family: 'Cinzel', serif !important;
+  color: #2B1E16 !important;
+  font-size: 13px !important;
+  display: block;
+  margin-bottom: 2px;
 }
 
 /* Custom scrollbar for gallery and smooth feel */

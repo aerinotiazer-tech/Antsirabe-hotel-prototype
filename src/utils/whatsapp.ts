@@ -63,9 +63,9 @@ export function createWhatsAppUrl(params?: BookingInquiryParams, phone = OFFICIA
 }
 
 /**
- * Lien spécifique pour demander l'adresse précise et l'itinéraire d'arrivée
+ * Lien spécifique pour demander l'itinéraire d'arrivée précis vers Mahazoarivo Nord
  */
 export function createLocationInquiryUrl(phone = OFFICIAL_PHONE_NUMBER): string {
-  const message = "Bonjour, je prépare mon voyage à Antsirabe et souhaite séjourner chez Antsirabe Hôtel — Chez DEO. Pourriez-vous m’indiquer votre adresse exacte et les repères d’accès pour arriver facilement ?";
+  const message = "Bonjour, je prépare mon séjour chez Antsirabe Hôtel — Chez DEO (Lot 1118 E 325 Mahazoarivo Nord). Pourriez-vous m’indiquer les repères d’accès et conseils d'arrivée depuis le centre-ville ?";
   return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 }

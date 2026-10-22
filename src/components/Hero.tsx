@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { MessageCircle, Calendar, Users, ArrowRight, ShieldCheck, Check, Sparkles } from 'lucide-react';
+import { MessageCircle, Calendar, Users, ArrowRight, ShieldCheck, Check, Sparkles, MapPin } from 'lucide-react';
 import { HOTEL_CONTACT } from '../types/hotel';
 import { createWhatsAppUrl } from '../utils/whatsapp';
-import { Highland3DScene } from './Highland3DScene';
+import { ScrollReactiveShowcase } from './ScrollReactiveShowcase';
 
 export const Hero: React.FC = () => {
   const [checkIn, setCheckIn] = useState('');
@@ -16,22 +16,24 @@ export const Hero: React.FC = () => {
   });
 
   return (
-    <section className="relative pt-8 pb-16 lg:pt-14 lg:pb-24 overflow-hidden">
+    <section className="relative pt-8 pb-16 lg:pt-12 lg:pb-20 overflow-hidden">
       {/* Subtle organic background gradient accents */}
       <div className="absolute top-0 right-0 -z-10 w-96 h-96 bg-[#C28251]/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute top-1/2 left-0 -z-10 w-80 h-80 bg-[#5A6B5C]/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
           {/* Left Column: Editorial Value Proposition & Short Path to WhatsApp */}
           <div className="lg:col-span-7 space-y-6">
             
-            {/* Context Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFE8DD] border border-[#DDD3C6] text-xs font-medium text-[#4A3B32]">
+            {/* Context Badge with Confirmed Address */}
+            <div className="inline-flex flex-wrap items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFE8DD] border border-[#DDD3C6] text-xs font-medium text-[#4A3B32]">
               <span className="w-2 h-2 rounded-full bg-[#1F7A44]"></span>
-              <span>Antsirabe • Hauts-Plateaux de Madagascar</span>
-              <span className="text-[#8C7A6D] text-[10px] hidden sm:inline">• Contact direct propriétaire</span>
+              <span className="font-semibold">{HOTEL_CONTACT.neighborhood}</span>
+              <span className="text-[#8C7A6D]">•</span>
+              <span>Antsirabe, Madagascar</span>
+              <span className="text-[#8C7A6D] text-[10px] hidden sm:inline">• Contact direct WhatsApp</span>
             </div>
 
             {/* Proposed Main Headline */}
@@ -46,8 +48,8 @@ export const Hero: React.FC = () => {
 
             {/* Concise Pitch */}
             <p className="text-base sm:text-lg text-[#5A4B40] leading-relaxed max-w-2xl">
-              Faites l'expérience d'une halte reposante au cœur de la capitale thermale malgache. 
-              Chambres spacieuses avec parquets en bois franc, calme préservé et accueil sur-mesure. 
+              Faites l'expérience d'une halte reposante à Antsirabe, dans le secteur paisible de <strong>Mahazoarivo Nord</strong>. 
+              Chambres spacieuses avec parquets en bois franc de Madagascar, calme préservé et accueil convivial Chez DEO. 
               Pour vos dates, contactez directement l'équipe sans intermédiaire.
             </p>
 
@@ -79,7 +81,7 @@ export const Hero: React.FC = () => {
                       type="date"
                       value={checkIn}
                       onChange={(e) => setCheckIn(e.target.value)}
-                      className="w-full text-xs px-3 py-2.5 rounded-lg border border-[#DDD3C6] bg-[#FAF7F2] text-[#2B1E16] focus:outline-none focus:ring-2 focus:ring-[#B55F38]"
+                      className="w-full text-xs px-3 py-2.5 rounded-lg border border-[#DDD3C6] bg-[#FAF7F2] text-[#2B1E16] focus:outline-none focus:ring-2 focus:ring-[#1F7A44]"
                     />
                   </div>
                 </div>
@@ -94,7 +96,7 @@ export const Hero: React.FC = () => {
                       type="date"
                       value={checkOut}
                       onChange={(e) => setCheckOut(e.target.value)}
-                      className="w-full text-xs px-3 py-2.5 rounded-lg border border-[#DDD3C6] bg-[#FAF7F2] text-[#2B1E16] focus:outline-none focus:ring-2 focus:ring-[#B55F38]"
+                      className="w-full text-xs px-3 py-2.5 rounded-lg border border-[#DDD3C6] bg-[#FAF7F2] text-[#2B1E16] focus:outline-none focus:ring-2 focus:ring-[#1F7A44]"
                     />
                   </div>
                 </div>
@@ -107,7 +109,7 @@ export const Hero: React.FC = () => {
                     id="hero-guests"
                     value={guests}
                     onChange={(e) => setGuests(Number(e.target.value))}
-                    className="w-full text-xs px-3 py-2.5 rounded-lg border border-[#DDD3C6] bg-[#FAF7F2] text-[#2B1E16] focus:outline-none focus:ring-2 focus:ring-[#B55F38]"
+                    className="w-full text-xs px-3 py-2.5 rounded-lg border border-[#DDD3C6] bg-[#FAF7F2] text-[#2B1E16] focus:outline-none focus:ring-2 focus:ring-[#1F7A44]"
                   >
                     <option value={1}>1 voyageur (Solo)</option>
                     <option value={2}>2 voyageurs (Couple)</option>
@@ -143,16 +145,16 @@ export const Hero: React.FC = () => {
               <p className="text-[11px] text-[#7A6B60] flex items-center gap-1.5 pt-1">
                 <ShieldCheck className="w-3.5 h-3.5 text-[#5A6B5C] shrink-0" />
                 <span>
-                  Numéro officiel vérifié : <strong>{HOTEL_CONTACT.phoneDisplay}</strong>. Aucun paiement en ligne, échange direct avec l’hôte.
+                  Numéro vérifié : <strong>{HOTEL_CONTACT.phoneDisplay}</strong> • Adresse : <strong>{HOTEL_CONTACT.address}</strong>
                 </span>
               </p>
             </div>
 
-            {/* Quick Micro-Highlights (Based on actual verified facts) */}
-            <div className="grid grid-cols-3 gap-3 pt-2 text-center">
+            {/* Quick Micro-Highlights */}
+            <div className="grid grid-cols-3 gap-3 pt-1 text-center">
               <div className="p-3 rounded-xl bg-[#FAF7F2] border border-[#E8DFD3]">
-                <div className="text-xs font-bold text-[#2B1E16]">Antsirabe</div>
-                <div className="text-[11px] text-[#7A6B60]">Vakinankaratra</div>
+                <div className="text-xs font-bold text-[#2B1E16]">Mahazoarivo Nord</div>
+                <div className="text-[11px] text-[#7A6B60]">Secteur calme</div>
               </div>
               <div className="p-3 rounded-xl bg-[#FAF7F2] border border-[#E8DFD3]">
                 <div className="text-xs font-bold text-[#2B1E16]">Chez DEO</div>
@@ -166,25 +168,9 @@ export const Hero: React.FC = () => {
 
           </div>
 
-          {/* Right Column: 3D Highland Scene Experience */}
-          <div className="lg:col-span-5 space-y-4">
-            <div className="flex items-center justify-between">
-              <span className="text-xs font-semibold uppercase tracking-wider text-[#7C6A5D]">
-                Ambiance des Hauts-Plateaux
-              </span>
-              <span className="text-[11px] text-[#8C7A6D]">
-                Scène interactive 3D
-              </span>
-            </div>
-
-            {/* The 3D Canvas Container */}
-            <Highland3DScene />
-
-            {/* Transparent Note on 3D */}
-            <p className="text-[11px] text-[#8C7A6D] text-center leading-relaxed">
-              Composition sculpturale suggérant la topographie étagée et la douceur minérale d’Antsirabe. 
-              Ne représente pas l'agencement exact du bâtiment.
-            </p>
+          {/* Right Column: Scroll-Reactive Visual Showcase (Replacing 3D) */}
+          <div className="lg:col-span-5 space-y-3">
+            <ScrollReactiveShowcase />
           </div>
 
         </div>

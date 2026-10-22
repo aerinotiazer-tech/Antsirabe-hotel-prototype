@@ -56,7 +56,7 @@ export const ContactSection: React.FC = () => {
                   {HOTEL_CONTACT.phoneDisplay}
                 </div>
                 <div className="text-[11px] text-[#7A6B60]">
-                  Antsirabe, Madagascar (indicatif international +261)
+                  {HOTEL_CONTACT.address}, Antsirabe, Madagascar
                 </div>
               </div>
 

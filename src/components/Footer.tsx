@@ -20,7 +20,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDeployGuide }) => {
               Antsirabe Hôtel
             </h3>
             <div className="text-xs text-[#D49B6A] uppercase tracking-wider font-medium">
-              Chez DEO • Antsirabe, Madagascar
+              Chez DEO • Lot 1118 E 325 Mahazoarivo Nord, Antsirabe
             </div>
             <p className="text-xs text-[#D9CFC4] leading-relaxed">
               Proposition de site vitrine haut de gamme et épuré. Conçu pour remplacer avantageusement 
@@ -142,7 +142,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDeployGuide }) => {
             © {new Date().getFullYear()} Antsirabe Hôtel — Chez DEO. Prototype conceptuel.
           </div>
           <div className="flex items-center gap-4">
-            <span>Antsirabe, Région Vakinankaratra, Madagascar</span>
+            <span>Lot 1118 E 325 Mahazoarivo Nord, Antsirabe, Madagascar</span>
           </div>
         </div>
 
