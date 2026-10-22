@@ -1,0 +1,6 @@
+{
+  "name": "Antsirabe Hôtel — Chez DEO",
+  "description": "Maquette web responsive et interactive pour Antsirabe Hôtel — Chez DEO à Madagascar, avec demande de disponibilité WhatsApp et immersion 3D subtile.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
